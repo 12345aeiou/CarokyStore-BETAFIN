@@ -1,0 +1,339 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.mensajeDelivery{
+    text-align: center;
+}
+
+/* --- BARRA DE NAVEGACIÓN --- */
+.navbar {
+    background: white;
+    color: black;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li a {
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* --- BOTÓN HAMBURGUESA --- */
+.menu-toggle {
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none; /* Oculto por defecto en escritorio */
+}
+
+/* --- 1. SECCIÓN INICIO (HERO) --- */
+.hero {
+    height: 100vh;
+    background: url('imagenes/de-que-estan-hechos-los-cosmeticos_905x603.webp') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.2em;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero h2 {
+    font-size: 2em;
+    text-shadow: 2px 2px 4px #000;
+}
+
+/* --- SECCIONES GENERALES --- */
+.section {
+    padding: 100px 5% 50px;
+    min-height: 50vh;
+    padding-top: 100px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+/* --- BUSCADOR --- */
+.buscador-container {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 60%;
+    max-width: 400px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    font-size: 1em;
+}
+
+.buscador-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+}
+
+.buscador-container button:hover {
+    background-color: #0056b3;
+}
+
+/* --- 2. GRID DE PRODUCTOS (RESPONSIVE) --- */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.producto-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+/* --- CARRUSEL DE IMÁGENES --- */
+.carrusel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.carrusel-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 10;
+}
+
+.carrusel-btn.prev { left: 0; border-radius: 0 5px 5px 0; }
+.carrusel-btn.next { right: 0; border-radius: 5px 0 0 5px; }
+
+/* --- INFO PRODUCTO --- */
+.producto-info {
+    padding: 20px;
+}
+
+.producto-info h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.precio {
+    margin: 10px 0;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.precio span {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.precio .menor { color: #d9534f; }
+.precio .mayor { color: #5cb85c; }
+
+.consultar-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.consultar-btn:hover {
+    background-color: #128c7e;
+}
+
+/* --- 3. SECCIÓN CONTACTO --- */
+.contacto-section {
+    text-align: center;
+    background-color: #eee;
+}
+
+.redes-sociales {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.red-social {
+    font-size: 2.5em;
+    color: white;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.red-social:hover {
+    transform: scale(1.1);
+}
+
+.instagram { background-color: #E1306C; }
+.facebook { background-color: #3b5998; }
+.whatsapp { background-color: #25d366; }
+.tiktok { background-color: #000000; }
+
+.whatsapp-info {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* --- MEDIA QUERIES (ADAPTABILIDAD MÓVIL) --- */
+
+@media (max-width: 768px) {
+    /* Mostrar el botón de hamburguesa */
+    .menu-toggle {
+        display: block; 
+        z-index: 1001; 
+    }
+
+    /* Posicionar los enlaces para que caigan (ocultos por defecto) */
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        height: 0; /* Oculto inicialmente */
+        overflow: hidden; 
+        transition: height 0.3s ease-in-out;
+    }
+
+    /* Clase 'active' agregada por JS para mostrar el menú */
+    .nav-links.active {
+        height: 200px; /* ALTURA AJUSTADA PARA INCLUIR CONTACTANOS */ 
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+        padding: 5px 0;
+    }
+
+    .nav-links li a {
+        display: block;
+        padding: 15px 0;
+    }
+    
+    .hero h1 {
+        font-size: 2.5em;
+    }
+    .hero h2 {
+        font-size: 1.5em;
+    }
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    #searchInput {
+        width: 80%;
+    }
+    .section-title {
+        font-size: 2em;
+    }
+}

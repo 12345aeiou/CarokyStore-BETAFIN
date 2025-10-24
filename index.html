@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAROKY STORE - Tienda Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">CAROKY STORE</div>
+        <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contactanos">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>BIENVENIDO</h1>
+            <h2>CAROKY STORE</h2>
+        </div>
+    </section>
+
+    <section id="productos" class="section">
+        <h2 class="section-title">Nuestros Productos</h2>
+
+        <div class="mensajeDelivery" >
+
+            <h2>Delivery (1-5 ud): S/5 </h2>
+            <h2>Delivery (6 ud a mas): Gratis</h2>
+
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="buscador-container">
+            <input type="text" id="searchInput" placeholder="Buscar producto...">
+            <button onclick="buscarProductos()">Buscar</button>
+        </div>
+
+        <div class="productos-grid" id="productosContainer">
+            </div>
+    </section>
+
+    <section id="contactanos" class="section contacto-section">
+        <h2 class="section-title">Contáctanos</h2>
+        <p>¡Estamos listos para atenderte! Síguenos en nuestras redes:</p>
+
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/carokystore/" target="_blank" class="red-social instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61577288164022" target="_blank" class="red-social facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://wa.me/51934733462" target="_blank" class="red-social whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.tiktok.com/@caroky.store" target="_blank" class="red-social tiktok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+        <p class="whatsapp-info">También puedes escribirnos directamente al 934 733 462.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 CAROKY STORE. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
